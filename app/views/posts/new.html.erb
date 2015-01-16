@@ -1,6 +1,10 @@
+<% if current_user.admin? %>
 <div id="page_wrapper">
 <h1> New post </h1>
 
 <%= render 'form' %>
 
 </div>
+<% else %>
+<p> Insufficient Permission</p>
+<% end %>
